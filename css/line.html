@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 中间文字 两端横线</title>
+    <style>
+
+        .dome1{
+           text-align: center;
+            position: relative;
+        }
+        .dome1::after{
+            position: absolute;
+            content: "";
+            display: block;
+            width: 40%;
+            height: 0;
+            border: 1px solid #eee;
+            top: 50%;
+            left: 0;
+        }
+        .dome1::before{
+            position: absolute;
+            content: "";
+            display: block;
+            width: 40%;
+            height: 0;
+            border: 1px solid #eee;
+            top: 50%;
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dome1">测试一下</div>
+</body>
+</html>
